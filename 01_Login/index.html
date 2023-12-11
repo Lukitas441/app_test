@@ -3,6 +3,7 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6b0ad3d290.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../normalize.css">
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 <body>
         <div class="container " id="login">
             <h1 class="display-4">Iniciar sesión</h1>
-            <form action="" method="post">
+            <form method="post">
                 <label for="email_login">Email:</label>
                 <input type="email" name="email" id="email_login" class="form-control" required>
                 
@@ -21,7 +22,7 @@
                     <i class="fa-solid fa-eye-slash seek-password_btn"></i>
                 </div>
                 
-                <button type="submit" class="btn btn-success">Ingresar</button>
+                <button class="btn btn-success">Ingresar</button>
             </form>
             <p class="login-signin_switch">No tienes una cuenta? <u>Clickea aquí</u></p>
         </div>
@@ -29,35 +30,35 @@
         
         <div class="container hidden" id="signin">
              <h1 class="display-4">Registrarse</h1>
-            <form action="" method="post">
+            <form method="post">
                 
                 <div class="name-surname_container">
                     <label for="name_signin">Nombre:</label>
                     <label for="surname_signin">Apellido:</label>
-                    <input type="text" id="name_signin" name="name" class="form-control" required>
-                    <input type="text" id="surname_signin" name="surname" class="form-control" required>
+                    <input type="text" id="name_signin" name="name" maxlength="40" class="form-control" required >
+                    <input type="text" id="surname_signin" name="surname" maxlength="40" class="form-control" required >
                 </div>
                 
                 <label for="email_signin">Email:</label>
                 <input type="email" id="email_signin" name="email" class="form-control" required>
 
                 <label for="username_signin">Usuario:</label>
-                <input type="text" id="username_signin" name="username" class="form-control" required>
+                <input type="text" id="username_signin" maxlength="40" name="username" class="form-control" required >
 
                 
                 <label for="password_signin">Contraseña:</label>
                 <div class="password_container">
-                    <input type="password" id="password_signin" name="password" class="form-control" required>
+                    <input type="password" id="password_signin" name="password" class="form-control" required >
                     <i class="fa-solid fa-eye-slash seek-password_btn"></i>
                 </div>
 
                 <label for="confirm_password_signin">Confirmar Contraseña:</label>
                 <div class="password_container">
-                    <input type="password" id="confirm_password_signin" name="confirm_password" class="form-control" required>
+                    <input type="password" id="confirm_password_signin" name="confirm_password" class="form-control" required >
                     <i class="fa-solid fa-eye-slash seek-password_btn"></i>
                 </div>
                 
-                <button type="submit" class="btn btn-success" id="signin_btn">Ingresar</button>
+                <button class="btn btn-success" id="signin_btn">Ingresar</button>
             </form>
             <p class="login-signin_switch">Ya tienes una cuenta? <u>Clickea aquí</u></p>
         </div>

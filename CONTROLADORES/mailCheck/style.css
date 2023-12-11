@@ -1,0 +1,26 @@
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    border: solid gray;
+    padding: 10px;
+}
+
+button{
+    align-self: center;
+    margin: 10px;
+    width: 90%;
+}
+
+input{
+    text-align: center;
+    letter-spacing: 1em;
+    width: 220px !important;
+}

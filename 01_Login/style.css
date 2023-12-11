@@ -1,90 +1,77 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+.container {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border: solid grey;
+  transition: 0.5s;
 }
 
-body{
-    max-height: 100vh;
-    width: 100vw;
-    display: flex;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-.container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    width: 90%;
-    max-width: 400px;
-    border: solid grey;
-    transition: .5s;
+button {
+  margin: 10px;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
+.login-signin_switch {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+u {
+  cursor: pointer;
+  color: rgb(0, 0, 70);
+  transition: 0.1s;
 }
 
-button{
-    margin: 10px;
+u:hover {
+  color: blue;
 }
 
-.login-signin_switch{
-    margin-top: 20px;
-    margin-bottom: 0;
+.transition-out {
+  position: absolute;
+  transform: translateX(200vw);
 }
-u{
-    cursor: pointer;
-    color: rgb(0, 0, 70);
-    transition: .1s;
-}
-
-u:hover{
-    
-    color: blue;
+.transition-in {
+  position: absolute;
+  transform: translateX(-200vw);
 }
 
-.transition-out{
-    position: absolute;
-    transform: translateX(200vw);
-    
-}
-.transition-in{
-    position: absolute;
-    transform: translateX(-200vw);
-    
-    
+.hidden {
+  display: none;
 }
 
-.hidden{
-    display: none;
+.password_container {
+  position: relative;
 }
 
-.password_container{
-    position: relative;
+.fa-eye-slash,
+.fa-eye {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  cursor: pointer;
+}
+.fa-eye {
+  right: 11px;
 }
 
-.fa-eye-slash, .fa-eye{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 10px;
-    cursor: pointer;
-}
-.fa-eye{
-    right: 11px;
+.name-surname_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
 }
 
-.name-surname_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 10px;
-}
-
-.uncomplete_input{
-    border: 1px solid red !important;
-    transition: .1s;
+.uncomplete_input {
+  border: 1px solid red !important;
+  background-color: rgba(255, 0, 0, 0.171);
+  transition: 0.1s;
 }
