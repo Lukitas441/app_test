@@ -55,25 +55,46 @@ loginSigninSwitch.forEach(btn => {
 const buttonSignin = document.querySelector('#signin_btn')
 
 buttonSignin.addEventListener('click', e => {
-    const password = document.querySelector('#password').value
-    const passwordCheck = document.querySelector('#confirm_password').value
-    const alerts = document.querySelector('#signin_alerts')
+    e.preventDefault()
+    const password = document.querySelector('#password_signin')
+    const passwordCheck = document.querySelector('#confirm_password_signin')
 
-    if(password){
-        if(password != passwordCheck){
-            e.preventDefault()
-            alerts.innerHTML = "Las contraseñas no coinciden"
-        }
-        if(password.length < 8){
-            e.preventDefault()
-            alerts.innerHTML = 'La contraseña es muy corta'
-        }
-    }else{
-        alerts.innerHTML = 'Hay campos incompletos'
-        e.preventDefault()
-    }
+    const inputs = $('#signin').find('input')
     
     setTimeout(() => {
-        alerts.innerHTML = null
-    }, 5000);
+        for(let i=0; i < inputs.length; i++){
+            if(!inputs[i].value){
+                inputs[i].classList.add('uncomplete_input')
+            }
+        }
+        if(password.value != passwordCheck.value){
+            password.classList.add('uncomplete_input')
+            passwordCheck.classList.add('uncomplete_input')
+        }
+    
+    }, 50);
+
+
+
+})
+
+document.querySelectorAll('*').forEach(elemnt => {
+    elemnt.addEventListener('click', () => document.querySelectorAll('input').forEach(input => input.classList.remove('uncomplete_input')))
+})
+
+document.querySelector('#password_signin').addEventListener('keyup', (e)=>{
+    const passwInput = e.currentTarget
+    if(passwInput.value.length == 0) passwInput.style.border = ""
+    if(passwInput.value.length > 0 && passwInput.value.length < 5) passwInput.style.border = "1px solid red"
+    if(passwInput.value.length > 5 && passwInput.value.length < 10) passwInput.style.border = "1px solid yellow"
+    if(passwInput.value.length > 10 ) passwInput.style.border = "1px solid green"
+})
+
+document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('keydown', e => {
+        var forbiddenKeys = ['<', '>', '{', '}', '"', "'", '^', '&', '*', '(', ')', '+', '=', '[', ']', '\\', '|', ';', ':', ',', '.', '/', '`'];
+        if(forbiddenKeys.includes(e.key)) {
+            e.preventDefault();
+        }
+    })
 })

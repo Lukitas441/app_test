@@ -9,19 +9,18 @@
     <title>Inicio de sesión</title>
 </head>
 <body>
-    <div id="main">
         <div class="container " id="login">
             <h1 class="display-4">Iniciar sesión</h1>
             <form action="" method="post">
-                <label for="email">Email:</label>
+                <label for="email_login">Email:</label>
                 <input type="email" name="email" id="email_login" class="form-control" required>
                 
-                <label for="password">Contraseña:</label>
+                <label for="password_login">Contraseña:</label>
                 <div class="password_container">
                     <input type="password" name="password" id="password_login" class="form-control" required>
                     <i class="fa-solid fa-eye-slash seek-password_btn"></i>
                 </div>
-                <p class="alerts" id="login_alerts"></p>
+                
                 <button type="submit" class="btn btn-success">Ingresar</button>
             </form>
             <p class="login-signin_switch">No tienes una cuenta? <u>Clickea aquí</u></p>
@@ -33,37 +32,36 @@
             <form action="" method="post">
                 
                 <div class="name-surname_container">
-                    <label for="name">Nombre:</label>
-                    <label for="surname">Apellido:</label>
-                    <input type="text" id="name" name="name" class="form-control" required>
-                    <input type="text" id="surname" name="surname" class="form-control" required>
+                    <label for="name_signin">Nombre:</label>
+                    <label for="surname_signin">Apellido:</label>
+                    <input type="text" id="name_signin" name="name" class="form-control" required>
+                    <input type="text" id="surname_signin" name="surname" class="form-control" required>
                 </div>
                 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" required>
+                <label for="email_signin">Email:</label>
+                <input type="email" id="email_signin" name="email" class="form-control" required>
 
-                <label for="username">Usuario:</label>
-                <input type="text" id="username" name="username" class="form-control" required>
+                <label for="username_signin">Usuario:</label>
+                <input type="text" id="username_signin" name="username" class="form-control" required>
 
                 
-                <label for="password">Contraseña:</label>
+                <label for="password_signin">Contraseña:</label>
                 <div class="password_container">
-                    <input type="password" id="password" name="password" class="form-control" required>
+                    <input type="password" id="password_signin" name="password" class="form-control" required>
                     <i class="fa-solid fa-eye-slash seek-password_btn"></i>
                 </div>
 
-                <label for="confirm_password">Confirmar Contraseña:</label>
+                <label for="confirm_password_signin">Confirmar Contraseña:</label>
                 <div class="password_container">
-                    
-                    <input type="password" id="confirm_password" name="confirm_password" class="form-control" required>
+                    <input type="password" id="confirm_password_signin" name="confirm_password" class="form-control" required>
                     <i class="fa-solid fa-eye-slash seek-password_btn"></i>
                 </div>
-                <p class="alerts" id="signin_alerts"></p>
+                
                 <button type="submit" class="btn btn-success" id="signin_btn">Ingresar</button>
             </form>
             <p class="login-signin_switch">Ya tienes una cuenta? <u>Clickea aquí</u></p>
         </div>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
